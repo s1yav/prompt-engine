@@ -12,6 +12,12 @@ Execute the template prompt @pulumi-consume-component-resource.md
 Execute the template prompt @pulumi-refactor-component-resource.md
 - **SOURCE_CODE**: [Highlight the target resource block or reference the file containing the raw code to refactor]
 
+Execute the template prompt @pulumi-generate-project-repo.md
+- **PROJECT_NAME**: "personal-website-infra"
+- **GCP_PROJECT_ID**: "my-secure-gcp-project-12345"
+- **GITHUB_VISIBILITY**: "private"
+
+
 ## MCP Suite
 
 Execute the template prompt @python-mcp-client-gemini-tailscale.md
