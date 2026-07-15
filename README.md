@@ -1,4 +1,4 @@
-# Infrastructure Prompt Ops (`prompt-ops`)
+# Prompt Engine (`prompt-engine`)
 
 A centralized, version-controlled repository for enterprise AI prompts, system roles, and infrastructure-as-code (IaC) generation templates. This package streamlines pair-programming workflows with advanced AI agents like **Antigravity** and **Cursor**.
 
@@ -12,7 +12,7 @@ This repository operates as a local "Prompt Engine." Instead of relying on memor
 Prompts are organized using a **three-tier kebab-case** pattern: `[technology]-[action]-[intent].md`.
 
 ```text
-📁 prompt-engineering/
+📁 prompt-engine/
 ├── 📄 README.md                 # Package documentation and agent setup
 ├── 📁 prompts/
 │   ├── 📁 cloud-engineering/    # Cloud and IaC automation blueprints
@@ -31,14 +31,14 @@ Antigravity is an agent-first workspace environment. To ensure its agents proact
 Antigravity automatically reads system rules placed at your active code project's root directory. 
 
 1. Create a file named `.antigravityrules` at the root of your application/infrastructure codebase.
-2. Paste the configuration block below to bind this `prompt-ops` package to the agent:
+2. Paste the configuration block below to bind this `prompt-engineering` package to the agent:
 
 ```markdown
 # Antigravity Workspace Instruction
 You are pair-programming with me on infrastructure design.
 
 ## Prompt Retrieval Rules
-- Before refactoring or writing infrastructure code, you must index the templates located in the local directory: `./prompt-ops/prompts/cloud-engineering/`
+- Before refactoring or writing infrastructure code, you must index the templates located in the local directory: `./prompt-engine/prompts/cloud-engineering/`
 - When I ask you to "use the custom construct template," locate the file `pulumi-refactor-component-resource.md` inside that directory, read its system prompt, and execute its requirements exactly.
 ```
 
@@ -50,7 +50,7 @@ Antigravity supports multi-line context staging directly inside its terminal cha
 3. Reference the template path directly alongside your instruction, save, and exit:
    ```text
    Refactor my active file using the blueprint found at:
-   ./prompt-ops/prompts/cloud-engineering/pulumi-refactor-component-resource.md
+   ./prompt-engine/prompts/cloud-engineering/pulumi-refactor-component-resource.md
    ```
 4. The file data will automatically stream into the live agent context window.
 
@@ -68,4 +68,3 @@ All newly contributed prompt assets must follow the strict formatting standard:
 1. File naming must match `[tech]-[action]-[intent].md`.
 2. Dynamic code blocks must use double curly braces (`{{VARIABLE_NAME}}`) to denote placeholders.
 3. Every prompt must explicitly define a **System Prompt / Role** block and an **Output Expectations** block.
-
