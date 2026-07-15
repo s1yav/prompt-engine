@@ -25,7 +25,7 @@ Execute a complete, end-to-end local terminal automation workflow to create a Pu
 ### 2. Mandatory Agent Execution Steps
 1. **Directory Setup:** Create and navigate into a clean workspace directory: `mkdir -p {{PROJECT_NAME}} && cd {{PROJECT_NAME}}`.
 2. **Pulumi Initialization:** Run `pulumi new gcp-typescript --name {{PROJECT_NAME}} --yes --non-interactive` to pull down the core template base.
-3. **Local Stack Synchronization:** Run `pulumi stack select dev --create` to force the creation and local generation of the `Pulumi.dev.yaml` file structure.
+3. **Local Stack Synchronization:** Run `pulumi stack init dev` to create an empty dev stack, ready for updates.
 4. **Secure Config Injection:** Run the native encryption command to hide your project ID: `pulumi config set gcp:project {{GCP_PROJECT_ID}} --secret`.
 5. **Git Bootstrap:** 
    - Initialize a local git state: `git init`.
