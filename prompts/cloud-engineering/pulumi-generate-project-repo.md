@@ -9,6 +9,7 @@ Instructs the AI agent to scaffold a production-ready TypeScript Pulumi reposito
 ## Variables
 - `{{PROJECT_NAME}}`: The desired directory and repository name (e.g., `personal-website-infra`).
 - `{{GCP_PROJECT_ID}}`: Your secure, encrypted Google Cloud target project identifier.
+- `{{GCP_PROJECT_REGION}}`: The GCP project region. It will be used as the default infrastructure region for all resources.
 - `{{GITHUB_VISIBILITY}}`: The repository privacy mapping (`public` or `private`).
 
 ## System Prompt / Role
@@ -26,7 +27,7 @@ Execute a complete, end-to-end local terminal automation workflow to create a Pu
 1. **Directory Setup:** Create and navigate into a clean workspace directory: `mkdir -p {{PROJECT_NAME}} && cd {{PROJECT_NAME}}`.
 2. **Pulumi Initialization:** Run `pulumi new gcp-typescript --name {{PROJECT_NAME}} --yes --non-interactive` to pull down the core template base.
 3. **Local Stack Synchronization:** Run `pulumi stack init dev` to create an empty dev stack, ready for updates.
-4. **Secure Config Injection:** Run the native encryption command to hide your project ID: `pulumi config set gcp:project {{GCP_PROJECT_ID}} --secret`.
+4. **Secure Config Injection:** Run the native encryption command to hide your project ID: `pulumi config set gcp:project {{GCP_PROJECT_ID}} --secret`. Set the default infrastructure region: `pulumi config set gcp:region {{GCP_PROJECT_REGION}}`.
 5. **Git Bootstrap:** 
    - Initialize a local git state: `git init`.
    - Stage all core scaffolding files: `git add .`.

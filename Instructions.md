@@ -15,7 +15,9 @@ Execute the template prompt @pulumi-refactor-component-resource.md
 Execute the template prompt @pulumi-generate-project-repo.md
 - **PROJECT_NAME**: "personal-website-infra"
 - **GCP_PROJECT_ID**: "my-secure-gcp-project-12345"
+- **GCP_PROJECT_REGION**: "us-central1"
 - **GITHUB_VISIBILITY**: "private"
+
 
 
 ## MCP Suite
