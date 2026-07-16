@@ -36,9 +36,6 @@ Perform the following operations:
      Description of Changes:
      <Provide a clear, human-readable paragraph explaining the goal and technical implementation details of these changes.>
 
-     List of modified resources:
-     - <list of changes>
-
      Pulumi Preview Output:
      ```text
      {{PULUMI_PREVIEW_OUTPUT}}
