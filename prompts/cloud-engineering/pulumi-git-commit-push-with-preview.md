@@ -33,6 +33,9 @@ Perform the following operations:
      ```text
      <type>(<scope>): <short description>
 
+     Description of Changes:
+     <Provide a clear, human-readable paragraph explaining the goal and technical implementation details of these changes.>
+
      List of modified resources:
      - <list of changes>
 
