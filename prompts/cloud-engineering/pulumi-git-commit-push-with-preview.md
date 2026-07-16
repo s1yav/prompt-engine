@@ -40,6 +40,10 @@ Perform the following operations:
      ```text
      {{PULUMI_PREVIEW_OUTPUT}}
      ```
+
+    List of modified resources:
+     - <list of changes>
+
      ```
 2. **Push the Commit:** Run `git push` to synchronize these changes with the remote GitHub repository.
 
