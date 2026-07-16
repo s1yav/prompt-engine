@@ -18,6 +18,9 @@ Execute the template prompt @pulumi-generate-project-repo.md
 - **GCP_PROJECT_REGION**: "us-central1"
 - **GITHUB_VISIBILITY**: "private"
 
+Execute the template prompt @pulumi-git-commit-push-with-preview.md
+- **STAGED_CHANGES**: [Provide the list of files currently staged in git]
+- **PULUMI_PREVIEW_OUTPUT**: [Provide the text output from running pulumi preview, stripping any permalinks]
 
 
 ## MCP Suite
